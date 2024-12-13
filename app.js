@@ -43,6 +43,7 @@ app.post("/payment-sheet", async (req, res) => {
 });
 
 // サーバーを起動
-app.listen(4242, () => {
-    console.log("Server is running on port 4242");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
